@@ -108,7 +108,7 @@
                     let op=currentOperation;
                     let prev=parseFloat(previousInput);
                     let current=parseFloat(currentInput);
-                    switch(currentOperation){
+                    switch(op){
                         case '+':
                             result=prev+current;
                             break;
@@ -131,7 +131,7 @@
                     currentInput=result.toString();
                     currentOperation='';
                     previousInput='';
-                    document.getElementById('display').value=`${prev} ${currentOperation} ${current}=${result}`;
+                    document.getElementById('display').value=`${prev} ${op} ${current}=${result}`;
                 }
                 function clearDisplay(){
                     currentInput='';
