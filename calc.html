@@ -105,6 +105,7 @@
                 function calculate(){
                     if(previousInput === '' || currentInput === '') return;
                     let result;
+                    let op=currentOperation;
                     let prev=parseFloat(previousInput);
                     let current=parseFloat(currentInput);
                     switch(currentOperation){
@@ -130,7 +131,7 @@
                     currentInput=result.toString();
                     currentOperation='';
                     previousInput='';
-                    document.getElementById('display').value=currentInput;
+                    document.getElementById('display').value=`${prev} ${currentOperation} ${current}=${result}`;
                 }
                 function clearDisplay(){
                     currentInput='';
